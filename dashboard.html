@@ -11,7 +11,7 @@
     <nav class="bg-white shadow">
       <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div class="flex items-center gap-2">
-          <img src="./assets/github-logo.png" class="w-6" />
+          <img src="assets/github-logo.png" class="w-6" />
 
           <h1 class="font-bold text-lg">GitHub Issues Tracker</h1>
         </div>
@@ -54,7 +54,7 @@
     >
       <div class="flex items-center gap-3">
         <div class="bg-purple-100 p-2 rounded-full">
-          <img src="./assets/aperture.png" class="w-5" />
+          <img src="assets/aperture.png" class="w-5" />
         </div>
 
         <div>
@@ -87,6 +87,29 @@
       id="issuesContainer"
       class="max-w-6xl mx-auto mt-6 grid grid-cols-4 gap-6"
     ></div>
+    <div
+id="issueModal"
+class="hidden fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center"
+>
+
+<div class="bg-white p-6 rounded w-[500px]">
+
+<h2 id="modalTitle" class="text-xl font-bold"></h2>
+
+<p id="modalDesc" class="text-gray-600 mt-2"></p>
+
+<p id="modalAuthor" class="text-sm text-gray-500 mt-4"></p>
+
+<button
+onclick="closeModal()"
+class="mt-5 bg-purple-600 text-white px-4 py-2 rounded"
+>
+Close
+</button>
+
+</div>
+
+</div>
 
     <script src="tabs.js"></script>
     <script src="issues.js"></script>
