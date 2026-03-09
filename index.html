@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="w-[420px] bg-white p-8 rounded-xl shadow">
+
+<!-- LOGO -->
+
+<div class="flex justify-center mb-4">
+<img src="./assets/github-logo.png" class="w-16">
+</div>
+
+<!-- TITLE -->
+
+<h1 class="text-2xl font-bold text-center">
+GitHub Issues Tracker
+</h1>
+
+<p class="text-gray-500 text-center mb-6">
+Sign in to manage your issues
+</p>
+
+<!-- FORM -->
+
+<form id="loginForm">
+
+<label class="text-sm font-medium">Username</label>
+
+<input
+id="username"
+type="text"
+placeholder="Enter Username"
+class="border w-full p-3 rounded-md mt-1 mb-1"
+/>
+
+<p class="text-blue-600 text-xs mb-3">
+Default: admin
+</p>
+
+<label class="text-sm font-medium">Password</label>
+
+<input
+id="password"
+type="password"
+placeholder="Enter Password"
+class="border w-full p-3 rounded-md mt-1 mb-1"
+/>
+
+<p class="text-blue-600 text-xs mb-5">
+Default: admin123
+</p>
+
+<!-- BUTTON -->
+
+<button
+class="w-full py-3 rounded-md text-white font-medium
+bg-gradient-to-r from-purple-600 to-indigo-600
+hover:opacity-90"
+>
+Sign In
+</button>
+
+</form>
+
+<!-- OR -->
+
+<div class="flex items-center gap-2 my-6">
+
+<hr class="flex-1">
+
+<p class="text-gray-400 text-sm">OR</p>
+
+<hr class="flex-1">
+
+</div>
+
+<p class="text-center text-gray-500 mb-3">
+Demo Credentials:
+</p>
+
+<!-- DEMO BOX -->
+
+<div class="bg-gray-100 p-4 rounded text-center text-sm">
+
+<p><b>Username:</b> admin</p>
+<p><b>Password:</b> admin123</p>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm")
+.addEventListener("submit",(e)=>{
+
+e.preventDefault()
+
+const username=document.getElementById("username").value
+const password=document.getElementById("password").value
+
+if(username==="admin" && password==="admin123"){
+
+window.location.href="dashboard.html"
+
+}else{
+
+alert("Invalid username or password")
+
+}
+
+})
+
+</script>
+</body>
+</html>
