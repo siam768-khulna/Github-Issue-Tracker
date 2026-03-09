@@ -32,7 +32,7 @@ const displayIssues = (issues) => {
         <div class="flex justify-between items-start">
 
             <img
-            src="assets/${issue.status === "open" ? "open-status.png" : "Closed- Status .png"}"
+            src="assets/${issue.status === "open" ? "Open-Status.png" : "Closed- Status .png"}"
             class="w-4"
             >
 
@@ -88,16 +88,6 @@ const displayIssues = (issues) => {
 
 };
 
-const card = document.createElement("div");
-
-card.className = "bg-white p-4 rounded shadow cursor-pointer";
-
-card.onclick = () => loadSingleIssue(issue.id);
-
-card.innerHTML = `
-<h3 class="font-semibold">${issue.title}</h3>
-<p class="text-sm text-gray-500">${issue.description}</p>
-`;
 const loadSingleIssue = async (id) => {
 
 const res = await fetch(
